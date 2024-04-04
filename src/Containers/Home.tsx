@@ -1,6 +1,6 @@
 import Header from '../Components/Header';
-import Gradient from '../assets/gradient.svg'
 import Heading_mobile from '../assets/Heading_mobile.png'
+import Main_text from '../assets/Main_text.png'
 
 function Home() {
   // State to hold the dynamic height of the div
@@ -13,7 +13,7 @@ function Home() {
       const scrolledHeight = window.scrollY;
       const newHeight = Math.max(100, 900 - scrolledHeight * (800 / (windowHeight / 2)));
     
-      setDivHeight(${newHeight}px); // Corrected line
+      setDivHeight(${newHeight}px); // Corrected line
     };
 */
   return (
@@ -22,15 +22,9 @@ function Home() {
         <Header />
         <img src={Heading_mobile} className='w-[290px] ml-10 mt-16' />
       </div>
-      <div className="hidden md:flex items-center justify-center w-full min-h-screen max-h-screen bg-[#FBF6F1]">
+      <div className="hidden md:flex items-center justify-center w-full min-h-screen max-h-screen bg-BG_image bg-center bg-no-repeat bg-fixed bg-cover">
         <Header />
-        <div
-          className="w-[1120px] h-[700px] my-3 flex flex-col justify-center"
-          //style={{ height: divHeight, transition: 'height 0.5s ease' }}
-        >
-          <img className='' src={Gradient} />
-          <h1 className="leading-[77.45px] text-[64px] font-[400] ml-16 absolute text-white">Let us create the perfect<br />brand for you!</h1>
-        </div>
+        <img src={Main_text} className='absolute h-[210px] left-[255px]' />
       </div>
     </>
   );
