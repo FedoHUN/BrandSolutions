@@ -5,6 +5,11 @@ import Sluzby from '../assets/Služby.png'
 import Onas from '../assets/O nás.png'
 import Cennik from '../assets/Cenník.png'
 import Kontakt from '../assets/Kontakt.png'
+import { HiXMark } from "react-icons/hi2";
+import Nav_logo from '../assets/Nav_logo.svg'
+import IG_logo from '../assets/ig_icon.svg'
+import IN_logo from '../assets/in_icon.svg'
+import FB_logo from '../assets/FB_icon.svg'
 
 function Header() {
   const [nav, setNav] = useState(false)
@@ -15,18 +20,25 @@ function Header() {
 
   return (
     <>
-      <nav className='w-full flex flex-row justify-between px-8 py-4 md:hidden text-white'>
-        <img className='w-[136px] h-[51.91px]' src={BS_logo} />
-        <img onClick={handleNav} src={navIcon} />
+      <nav className='w-screen flex flex-row justify-between px-8 py-4 md:hidden text-white bg-Mobile_nav bg-top bg-cover bg-no-repeat  fixed top-0 z-30 rounded-b-xl shadow-[0_4px_4px_0_#00000040]'>
+        <img className='w-[136px] h-[48px]' src={BS_logo} />
+        {!nav ? <img onClick={handleNav} className='w-[48px]' src={navIcon} /> : <HiXMark onClick={handleNav} className='w-[48px] h-full' />}
         <div onClick={handleNav} className={nav? 'w-full h-screen absolute' : 'hidden'}></div>
-        <div className={nav ? 'left-0 top-0 w-[60%] h-full border-r border-r-[#c4bab0] bg-[#FBF6F1] ease-in-out duration-500 fixed z-10' : 'top-0 w-[60%] h-full ease-in-out duration-500 fixed left-[-100%] z-10' }>
-        <h1 className="w-full text-2xl text-black font-bold m-4">Brand Solutions</h1>
-        <ul className="uppercase p-4 text-black">
-          <li className="p-4 border-b border-gray-600 hover:bg-gray-600">Služby</li>
-          <li className="p-4 border-b border-gray-600 hover:bg-gray-600">O nás</li>
-          <li className="p-4 border-b border-gray-600 hover:bg-gray-600">Cenník</li>
-          <li className="p-4 border-gray-600 hover:bg-gray-600">Kontakt</li>
+        <div className={nav ? 'left-0 top-0 w-[60%] h-full border-r border-r-[#2c2c2c] bg-[#333333] ease-in-out duration-500 fixed z-30' : 'top-0 w-[60%] h-full ease-in-out duration-500 fixed left-[-100%] z-[]' }>
+        <img src={Nav_logo} className='p-6'/>
+        <ul className="uppercase p-4 text-[#FBF6F1] text-[32px] leading-[48px] font-[600]">
+          <li className="py-4 border-b border-[#23B6B0] hover:bg-gray-600 hover:rounded-xl">Služby</li>
+          <li className="py-4 border-b border-[#23B6B0] hover:bg-gray-600 hover:rounded-xl">O nás</li>
+          <li className="py-4 border-b border-[#23B6B0] hover:bg-gray-600 hover:rounded-xl">Cenník</li>
+          <li className="py-4 border-b border-[#23B6B0] hover:bg-gray-600 hover:rounded-xl">Kontakt</li>
+          <li className="py-4 hover:bg-gray-600 hover:rounded-xl">Socials</li>
+          <div className='flex flex-row gap-2'>
+            <img className='hover:bg-[#404949] rounded-full '  src={IN_logo} />
+            <img className='hover:bg-[#404949] rounded-full '  src={IG_logo} />
+            <img className='hover:bg-[#404949] rounded-full '  src={FB_logo} />
+          </div>
         </ul>
+        
       </div>
       </nav>
        <nav className="hidden md:fixed z-20 top-0 start-0 w-full text-black md:flex justify-center">

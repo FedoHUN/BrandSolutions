@@ -18,9 +18,9 @@ function Home() {
 */
   return (
     <>
-      <div className='h-screen w-full bg-Mobile_bg md:hidden'>
+      <div className='h-screen w-full bg-Mobile_bg md:hidden bg-top bg-cover bg-no-repeat pt-[80px]'>
         <Header />
-        <img src={Heading_mobile} className='w-[290px] ml-10 mt-16' />
+        <img src={Heading_mobile} className='w-[290px] ml-12 mt-16' />
       </div>
       <div className="hidden md:flex items-center justify-center w-full min-h-screen max-h-screen bg-BG_image bg-center bg-no-repeat bg-fixed bg-cover">
         <Header />

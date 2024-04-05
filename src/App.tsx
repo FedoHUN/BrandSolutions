@@ -9,8 +9,8 @@ function App() {
 
   return (
     <>
-      <Sidebar />
       <Home />
+      <Sidebar />
       <Services />
       <WhyUs />
       <Form />
