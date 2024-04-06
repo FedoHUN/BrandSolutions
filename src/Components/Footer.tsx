@@ -1,8 +1,8 @@
 import BS_logo from '../assets/BS_Logo.png'
-import IG_logo from '../assets/ig_icon.svg'
-import IN_logo from '../assets/in_icon.svg'
-import FB_logo from '../assets/FB_icon.svg'
 import Logo_mobile from '../assets/BS_footer_mobile.png'
+import { BsLinkedin } from "react-icons/bs";
+import { BsFacebook } from "react-icons/bs";
+import { BsInstagram } from "react-icons/bs";
 
 function Footer() {
   return(
@@ -15,10 +15,10 @@ function Footer() {
         </div>
         <div className='flex flex-col text-center items-center justify-center gap-1'>
           <span className='leading-[36px] text-[24px] font-[700]'>socials</span>
-            <div className='flex flex-row justify-center items-center gap-2'>
-                <img src={IN_logo} />
-                <img src={IG_logo} />
-                <img src={FB_logo} />
+            <div className='flex flex-row justify-center items-center gap-4 text-3xl text-[#23B6B0]'>
+                <BsFacebook />
+                <BsLinkedin />
+                <BsInstagram />
             </div>
         </div>
       </div>
@@ -31,10 +31,10 @@ function Footer() {
         </div>
         <div className='flex flex-col text-center items-center justify-center gap-2'>
           <h3 className='text-[24px] leading-[29.05px] font-[400]'>Socials</h3>
-          <div className='flex flex-row gap-2'>
-            <img src={IN_logo} />
-            <img src={IG_logo} />
-            <img src={FB_logo} />
+          <div className='flex flex-row gap-3  text-4xl text-[#23B6B0]'>
+            <BsFacebook />
+            <BsLinkedin />
+            <BsInstagram />
           </div>
         </div>
       </div>

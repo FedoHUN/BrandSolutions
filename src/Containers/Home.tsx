@@ -1,4 +1,4 @@
-import Header from '../Components/Header';
+import Header from '../Components/Header/Header';
 import Heading_mobile from '../assets/Heading_mobile.png'
 import Main_text from '../assets/Main_text.png'
 
