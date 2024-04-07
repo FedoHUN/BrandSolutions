@@ -31,10 +31,10 @@ function Footer() {
         </div>
         <div className='flex flex-col text-center items-center justify-center gap-2'>
           <h3 className='text-[24px] leading-[29.05px] font-[400]'>Socials</h3>
-          <div className='flex flex-row gap-3  text-4xl text-[#23B6B0]'>
-            <BsFacebook />
-            <BsLinkedin />
-            <BsInstagram />
+          <div className='flex flex-row gap-3  text-3xl text-[#23B6B0]'>
+            <BsFacebook className='cursor-pointer' />
+            <BsLinkedin className='cursor-pointer' />
+            <BsInstagram className='cursor-pointer' />
           </div>
         </div>
       </div>

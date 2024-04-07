@@ -1,5 +1,7 @@
 import Blue_m1 from '../assets/Blue_fm1.png'
 import Blue_m2 from '../assets/Blue_fm2.png'
+import Blue_1 from '../assets/Blue_1.svg'
+import Blue_2 from '../assets/Blue_2.svg'
 
 function End() {
   return(
@@ -28,7 +30,7 @@ function End() {
         <img alt='bluedesign' src={Blue_m1} className='absolute bottom-0 left-0 h-[49.43px]' />
         <img alt='bluedesign' src={Blue_m2} className='absolute bottom-[-6px] right-0 h-[49.43px]' />
       </div>
-      <div className='hidden h-[488px] md:flex flex-row justify-center bg-[#FBF6F1]'>
+      <div className='relative hidden h-[488px] md:flex flex-row justify-center bg-[#FBF6F1]'>
         <div className='w-1/2 h-full flex flex-col gap-10 justify-center items-center ml-6'>
           <h1 className='w-[550px] font-bold text-[36px] leading-[54px]'>Vytvorme spolu silný <span className='text-[#23B6B0]'>online Brand</span></h1>
           <p className='w-[550px] text-[24px] leading-[36px]'>Povedzte nám svoje potreby a očakávania, my sa postaráme o zvyšok.</p>
@@ -51,6 +53,8 @@ function End() {
             <button type='submit' className='bg-[#333333] px-4 py-2 rounded-xl font-[700] leading-[19.36px] text-[16px] text-white my-4 w-max shadow-[0_4px_4px_0_#00000040]'>Odoslať</button>
           </form>
         </div>
+        <img alt='bluedesign' src={Blue_1} className='absolute bottom-0 left-0 h-[120px]'/>
+        <img alt='bluedesign' src={Blue_2} className='absolute bottom-0 right-0 h-[120px]' />
       </div>
     </>
   )

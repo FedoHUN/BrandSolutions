@@ -39,19 +39,24 @@ function Services() {
           );
         })}
       </div>
-      <div className='hidden w-full h-full max-h-screen bg-[#FBF6F1] md:flex flex-row justify-center gap-40 py-32'>
-        {packs.map ((pack) => {
-          return(
-            <div className='text-black w-[262.5px] h-[352px] rounded-xl border border-[#33B4AF] flex flex-col gap-3 justify-between items-center text-center px-4 py-4 shadow-[0_4px_4px_0_#00000040]'>
-              <span className='font-[400] leading-[24.2px] text-[20px] mt-10'>{pack.name}</span>
-              <h3 className='font-[400] leading-[43.57px] text-[36px]'>{pack.price}€</h3>
-              <p className='font-[400] leading-[19.36px] text-[16px]'>{pack.description}</p>
-              <button className='bg-[#333333] px-4 py-2 rounded-xl font-[400] leading-[19.36px] text-[16px] text-white my-4'>Objednať</button>
-            </div>
-          );
-        })}
-        <img className='absolute right-0 mt-52' src={Vector1} />
-        <img className='absolute left-0' src={Vector2} />
+      <div className='hidden md:flex flex-col bg-[#FBF6F1]'>
+        <div className='w-full h-[490px] flex flex-col justify-end pb-6'>
+          <h2 className='text-7xl font-semibold text-[#23B6B0] text-center'>Naše služby</h2>
+        </div>
+        <div className='w-full h-full max-h-screen flex flex-row justify-center gap-40 pt-20 pb-32'>
+          {packs.map ((pack) => {
+            return(
+              <div className='text-black w-[262.5px] h-[352px] rounded-xl border border-[#33B4AF] flex flex-col gap-3 justify-between items-center text-center px-4 py-4 shadow-[0_4px_4px_0_#00000040]'>
+                <span className='font-[400] leading-[24.2px] text-[20px] mt-10'>{pack.name}</span>
+                <h3 className='font-[400] leading-[43.57px] text-[36px]'>{pack.price}€</h3>
+                <p className='font-[400] leading-[19.36px] text-[16px]'>{pack.description}</p>
+                <button className='bg-[#333333] px-4 py-2 rounded-xl font-[400] leading-[19.36px] text-[16px] text-white my-4'>Objednať</button>
+              </div>
+            );
+          })}
+          <img className='absolute right-0 mt-52' src={Vector1} />
+          <img className='absolute left-0' src={Vector2} />
+        </div>
       </div>
     </>
   )
