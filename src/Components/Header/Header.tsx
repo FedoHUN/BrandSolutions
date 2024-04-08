@@ -7,8 +7,28 @@ import { BsLinkedin } from "react-icons/bs";
 import { BsFacebook } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
 import './Header.css'
+import { NavLink } from 'react-router-dom';
 
 function Header() {
+  const subPages = [
+    {
+      text: 'Domov',
+      path: '/',
+      img: ''
+    },{
+      text: 'Služby',
+      path: '/Sluzby',
+      img: ''
+    },
+    {
+      text: 'Kontakt',
+      path: '/Kontakt',
+    },
+    {
+      text: 'O nás',
+      path: '/O-nas',
+    },
+  ]
   const [nav, setNav] = useState(false)
 
   const handleNav = () => {
@@ -40,10 +60,14 @@ function Header() {
       </nav>
        <nav className="hidden md:fixed z-20 top-0 start-0 w-full text-black md:flex justify-center">
           <div className="flex flex-row items-center justify-center font-[400] text-[32px] leading-[38.73px] text-[#FBF6F1] gap-20 w-[1120px] h-[62px] py-4">
-            <a className="cursor-pointer navText">Služby</a>
-            <a className="cursor-pointer navText">Kontakt</a>
-            <a className="cursor-pointer navText">Cenník</a>
-            <a className="cursor-pointer navText">O nás</a>
+            {subPages.map((subPage) => (
+              <NavLink key={subPage.path} to={`${subPage.path}`}
+              className={({isActive}) => {
+                return isActive ? 'navActive cursor-pointer' : 'navText cursor-pointer'
+              }}>
+                {subPage.text}
+              </NavLink>
+            ))}
           </div>
 
        </nav>

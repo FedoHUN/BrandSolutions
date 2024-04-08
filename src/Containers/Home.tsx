@@ -1,10 +1,12 @@
 import Header from '../Components/Header/Header';
 import Heading_mobile from '../assets/Heading_mobile.png'
 import Main_text from '../assets/Main_text.png'
+import Sluzby from '../assets/SLuzby.png'
 import { useEffect, useState} from 'react';
 
 function Home() {
   const [visible, setVisible] = useState(0)
+  const pathname = window.location.pathname;
 
   const handleScroll = () => {
     const currentScrollPos = window.scrollY;
@@ -40,10 +42,11 @@ function Home() {
       </div>
       <div className={
         visible == 0 ? "hidden md:flex fixed top-0 items-center justify-center w-full min-h-screen max-h-screen bg-BG_image bg-center bg-no-repeat bg-cover bg-fixed duration-500 z-10 inset-x-0 mx-auto" :
-        visible == 1 ? "hidden md:flex items-center justify-center w-[1450px] min-h-screen max-h-screen -top-[60%] bg-BG_image bg-center bg-no-repeat bg-cover fixed rounded-b-[60px] z-10 duration-500 inset-x-0 mx-auto" : "hidden md:flex items-center justify-center w-[1120px] min-h-screen max-h-screen -top-[93%] bg-BG_image bg-center bg-no-repeat bg-cover fixed rounded-b-[40px] z-10 duration-500 inset-x-0 mx-auto"
+        visible == 1 ? "hidden md:flex items-center justify-center w-[1450px] min-h-screen max-h-screen -top-[60%] bg-BG_image bg-center bg-no-repeat bg-cover fixed rounded-b-[60px] z-10 duration-500 inset-x-0 mx-auto XXL:-top-[70%]" : "hidden md:flex items-center justify-center w-[1120px] min-h-screen max-h-screen -top-[93%] bg-BG_image bg-center bg-no-repeat bg-cover fixed rounded-b-[40px] z-10 duration-500 inset-x-0 mx-auto XXL:-top-[95%]"
         }>
         <Header />
-        <img src={Main_text} className={visible == 0 ? 'absolute h-[210px]' : visible == 1 ? 'absolute h-[180px] top-[700px] inset-x-0 mx-auto' :'hidden'} />
+        {pathname == '/' ? <img src={Main_text} className={visible == 0 ? 'absolute h-[210px]' : visible == 1 ? 'absolute h-[180px] top-[70%] inset-x-0 mx-auto XXL:top-[80%]' :'hidden'} />
+        : <img src={Sluzby} className={visible == 0 ? 'absolute h-[210px]' : visible == 1 ? 'absolute h-[180px] top-[70%] inset-x-0 mx-auto XXL:top-[80%]' :'hidden'} />}
       </div>
     </>
   );
