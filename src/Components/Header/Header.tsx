@@ -14,19 +14,18 @@ function Header() {
     {
       text: 'Domov',
       path: '/',
-      img: ''
-    },{
-      text: 'Služby',
-      path: '/Sluzby',
-      img: ''
     },
     {
-      text: 'Kontakt',
-      path: '/Kontakt',
+      text: 'Služby',
+      path: '/Sluzby',
     },
     {
       text: 'O nás',
       path: '/O-nas',
+    },
+    {
+      text: 'Kontakt',
+      path: '/Kontakt',
     },
   ]
   const [nav, setNav] = useState(false)
@@ -43,19 +42,22 @@ function Header() {
         <div onClick={handleNav} className={nav? 'w-full h-screen absolute' : 'hidden'}></div>
         <div className={nav ? 'left-0 top-0 w-[60%] h-full border-r border-r-[#2c2c2c] bg-[#333333] ease-in-out duration-500 fixed z-30' : 'top-0 w-[60%] h-full ease-in-out duration-500 fixed left-[-100%] z-[]' }>
         <img src={Nav_logo} className='p-6'/>
-        <ul className="uppercase p-4 text-[#FBF6F1] text-[32px] leading-[48px] font-[600]">
-          <li className="py-4 border-b border-[#23B6B0] hover:bg-gray-600 hover:rounded-xl">Služby</li>
-          <li className="py-4 border-b border-[#23B6B0] hover:bg-gray-600 hover:rounded-xl">O nás</li>
-          <li className="py-4 border-b border-[#23B6B0] hover:bg-gray-600 hover:rounded-xl">Cenník</li>
-          <li className="py-4 border-b border-[#23B6B0] hover:bg-gray-600 hover:rounded-xl">Kontakt</li>
-          <li className="py-4 hover:bg-gray-600 hover:rounded-xl">Socials</li>
-          <div className='flex flex-row gap-5 text-[#23B6B0]'>
+        <div className="p-4 text-[#FBF6F1] text-[32px] leading-[48px] font-[600] flex flex-col">
+          {subPages.map((subPage) => (
+              <NavLink key={subPage.path} to={`${subPage.path}`}
+              className={({isActive}) => {
+                return isActive ? "py-4 border-b border-[#23B6B0] hover:bg-gray-600 hover:rounded-xl" : "py-4 border-b border-[#23B6B0] hover:bg-gray-600 hover:rounded-xl"
+              }}>
+                {subPage.text}
+              </NavLink>
+            ))}
+            <span className="py-4 hover:bg-gray-600 hover:rounded-xl">Socials</span>
+            <div className='flex flex-row gap-5 text-[#23B6B0]'>
             <BsLinkedin />
             <BsInstagram />
             <BsFacebook />
           </div>
-        </ul>
-        
+        </div>
       </div>
       </nav>
        <nav className="hidden md:fixed z-20 top-0 start-0 w-full text-black md:flex justify-center">

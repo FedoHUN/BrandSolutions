@@ -25,12 +25,12 @@ function Footer() {
       <div className="hidden w-full bg-[#333333] h-[244px] md:flex flex-row justify-evenly items-center text-white">
         <img className='h-[77px] w-[265px]' src={BS_logo}/>
         <div className='flex flex-col text-center items-center justify-center pr-36'>
-          <h3 className='text-[24px] leading-[29.05px] font-[400]'>Kontakt</h3>
+          <h3 className='text-[24px] leading-[29.05px] font-[700]'>Kontakt</h3>
           <span className='text-[16px] leading-[19.36px] font-[400]'>+421 917 280 069</span>
           <span className='text-[16px] leading-[19.36px] font-[400]'>info@brandsolutions.sk</span>
         </div>
         <div className='flex flex-col text-center items-center justify-center gap-2'>
-          <h3 className='text-[24px] leading-[29.05px] font-[400]'>Socials</h3>
+          <h3 className='text-[24px] leading-[29.05px] font-[700]'>Socials</h3>
           <div className='flex flex-row gap-3  text-3xl text-[#23B6B0]'>
             <BsFacebook className='cursor-pointer' />
             <BsLinkedin className='cursor-pointer' />

@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import HomePage from './homePage.tsx'
 import Sluzby from './Sluzby.tsx';
+import Onas from './Onas.tsx';
 import './index.css'
 
 const router = createBrowserRouter([{
@@ -13,6 +14,10 @@ const router = createBrowserRouter([{
   {
     path: '/Sluzby',
     element: <Sluzby />,
+  },
+  {
+    path: '/O-nas',
+    element: <Onas />
   }
 ]);
 
