@@ -31,10 +31,10 @@ function Packages() {
     <>
     <div className="relative flex flex-col gap-6 md:gap-24 justify-center items-center bg-[#FBF6F1]">
       <div className="md:h-[480px]"></div>
-      <img src={B2} className='hidden md:flex absolute right-0 top-[800px]' />
+      <img src={B2} className='hidden md:flex absolute right-0 top-[750px]' />
       <img src={B3} className='hidden md:flex absolute left-0 top-[1600px]' />
-      <img src={B4} className='hidden md:flex absolute right-0 top-[1800px]' />
-      <img src={B1} className='hidden md:flex absolute left-0 top-[630px]' />
+      <img src={B4} className='hidden md:flex absolute right-0 top-[1750px]' />
+      <img src={B1} className='hidden md:flex absolute left-0 top-[600px]' />
       <img src={M1} className='md:hidden absolute left-0 top-[260px]'/>
       <img src={M2} className='md:hidden absolute right-0 top-[1470px]'/>
       <img src={M3} className='md:hidden absolute left-0 top-[1800px]'/>

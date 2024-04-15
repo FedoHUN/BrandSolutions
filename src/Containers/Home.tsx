@@ -3,6 +3,7 @@ import Heading_mobile from '../assets/Heading_mobile.png'
 import Main_text from '../assets/Main_text.png'
 import Sluzby from '../assets/SLuzby.png'
 import Onas_img from '../assets/O-nas.png'
+import Onas_m from '../assets/O-nas_m.png'
 import Sluzby_mobile from '../assets/Sluzby_mobile.png'
 import { useEffect, useState} from 'react';
 
@@ -40,8 +41,10 @@ function Home() {
     <>
       <div className='h-screen w-full bg-Mobile_bg md:hidden bg-top bg-cover bg-no-repeat pt-[80px] flex'>
         <Header />
-        {pathname == '/' ? <img src={Heading_mobile} className='w-[296px] h-fit ml-12 mt-16' />
-        : <img src={Sluzby_mobile} className='w-[290px] m-auto' />}
+        {pathname == '/' ? <img src={Heading_mobile} className='w-[296px] h-max ml-12 mt-16' />
+        : pathname == '/Sluzby' ? <img src={Sluzby_mobile} className='w-[290px] m-auto' />
+        : <img src={Onas_m} className='w-[290px] m-auto' />
+      }
         
       </div>
       <div className={
@@ -50,8 +53,8 @@ function Home() {
         }>
         <Header />
         {pathname == '/' ? <img src={Main_text} className={visible == 0 ? 'absolute h-[210px]' : visible == 1 ? 'absolute h-[180px] top-[70%] inset-x-0 mx-auto XXL:top-[80%]' :'hidden'} />
-        : pathname == '/Sluzby' ? <img src={Sluzby} className={visible == 0 ? 'absolute h-[210px]' : visible == 1 ? 'absolute h-[180px] top-[70%] inset-x-0 mx-auto XXL:top-[80%]' :'hidden'} />
-        : <img src={Onas_img} className={visible == 0 ? 'absolute h-[190px]' : visible == 1 ? 'absolute h-[160px] top-[70%] inset-x-0 mx-auto XXL:top-[80%]' :'hidden'} />
+        : pathname == '/Sluzby' ? <img src={Sluzby} className={visible == 0 ? 'absolute h-[170px]' : visible == 1 ? 'absolute h-[140px] top-[75%] inset-x-0 mx-auto XXL:top-[80%]' :'hidden'} />
+        : <img src={Onas_img} className={visible == 0 ? 'absolute h-[150px]' : visible == 1 ? 'absolute h-[120px] top-[75%] inset-x-0 mx-auto XXL:top-[80%]' :'hidden'} />
         }
       </div>
     </>
